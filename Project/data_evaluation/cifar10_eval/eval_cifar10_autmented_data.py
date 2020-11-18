@@ -9,12 +9,12 @@ os.environ['KMP_DUPLICATE_LIB_OK']='True'
 # model = tf.keras.models.load_model('CNN_with_dropout.h5')
 # model = tf.keras.models.load_model('../models/cifar10_models/')
 
-(X_train, y_train), (X_test, y_test) = cifar10.load_data()
+# (X_train, y_train), (X_test, y_test) = cifar10.load_data()
 
 
 model_name_list = [
     "CNN_with_dropout.h5",
-    # "CNN_without_dropout.h5",
+    "CNN_without_dropout.h5",
     # "ResNet_v1.h5",
     # "ResNet_v2.h5",
     # "lenet5_with_dropout.h5",

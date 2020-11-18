@@ -9,7 +9,7 @@ os.environ['KMP_DUPLICATE_LIB_OK']='True'
 # model = tf.keras.models.load_model('CNN_with_dropout.h5')
 # model = tf.keras.models.load_model('../models/cifar100_models/')
 
-(X_train, y_train), (X_test, y_test) = cifar100.load_data()
+# (X_train, y_train), (X_test, y_test) = cifar100.load_data()
 
 
 model_name_list = [
