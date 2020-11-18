@@ -16,8 +16,8 @@ os.environ['KMP_DUPLICATE_LIB_OK']='True'
 CNN_with_dropout
 """
 model_name_list = [
-    "CNN_with_dropout.h5",
-    "CNN_without_dropout.h5",
+    # "CNN_with_dropout.h5",
+    # "CNN_without_dropout.h5",
     "ResNet_v1.h5",
     "ResNet_v2.h5",
     "lenet5_with_dropout.h5",
@@ -36,7 +36,9 @@ for model_name_tmp in model_name_list:
     x_true = X_train[:20000]
     y_true= y_train[:20000]
     augmentation_policy=""
-    model=tf.keras.models.load_model(model_name)
+    # model=tf.keras.models.load_model(model_name)
+    model_pre = "../models/cifar100_models/"
+    model = tf.keras.models.load_model(model_pre + model_name)
     eval_class_CNN_with_dropout = eval_class(
         dataset_name=dataset_name,
         classes_num=classes_num,
