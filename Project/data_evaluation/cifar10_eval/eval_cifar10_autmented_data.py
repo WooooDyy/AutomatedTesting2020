@@ -125,4 +125,3 @@ with open("../../../Data/cifar10_tables/cifar10_accuracy.csv", "w",newline="") a
         writer1.writerow(acc_list)
         writer2.writerow(acc_minus_list)
         writer3.writerow(acc_loss_rate_list)
-#todo 跑完eval cifar10的，填进去，在搞cifar10的

@@ -16,12 +16,12 @@ os.environ['KMP_DUPLICATE_LIB_OK']='True'
 CNN_with_dropout
 """
 model_name_list = [
-    # "CNN_with_dropout.h5",
-    # "CNN_without_dropout.h5",
-    # "ResNet_v1.h5",
-    # "ResNet_v2.h5",
-    # "lenet5_with_dropout.h5",
-    # "lenet5_without_dropout.h5",
+    "CNN_with_dropout.h5",
+    "CNN_without_dropout.h5",
+    "ResNet_v1.h5",
+    "ResNet_v2.h5",
+    "lenet5_with_dropout.h5",
+    "lenet5_without_dropout.h5",
     "random1_cifar100.h5",
     "random2_cifar100.h5"
 ]

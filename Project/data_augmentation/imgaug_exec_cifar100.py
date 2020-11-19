@@ -112,5 +112,4 @@ np.save("../../Data/aug_imgs_cifar100/aug_imgs_cifar100_crop_rotate_brightness_y
 # 
 # batch_idx+=1
 
-#todo 导出数据存起来
 
