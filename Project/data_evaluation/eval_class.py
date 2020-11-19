@@ -26,8 +26,7 @@ class eval_class:
     augmentation_policy = None
     model = None
     model_name = None
-    def __init__(self,dataset_name,classes_num,batch_size,x_true,
-                 y_true,augmentation_policy,model,model_name):
+    def __init__(self,dataset_name,classes_num,batch_size,x_true,y_true,augmentation_policy,model,model_name):
         self.dataset_name = dataset_name
         if(classes_num==10):
             self.classes_list = [i for i in range(10)]
