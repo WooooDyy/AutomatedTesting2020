@@ -29,7 +29,7 @@ class imgaug_cifar100:
 
     def crop(self, batch_idx):
         seq = iaa.Sequential([
-            iaa.Crop(percent=(0, 0.25))
+            iaa.Crop(percent=(0, 0.1))
         ])
         images = self.x_train[batch_idx * self.batch_size:(batch_idx + 1) * self.batch_size]
         images_aug = seq.augment_images(images)
@@ -42,7 +42,7 @@ class imgaug_cifar100:
 
     def shift(self, batch_idx):
         seq = iaa.Sequential([
-            iaa.Affine(translate_percent={'x': (-0.2, 0.2), 'y': (-0.2, 0.2)})
+            iaa.Affine(translate_percent={'x': (-0.1, 0.1), 'y': (-0.1, 0.1)})
         ])
         images = self.x_train[batch_idx * self.batch_size:(batch_idx + 1) * self.batch_size]
         images_aug = seq.augment_images(images)
@@ -56,7 +56,7 @@ class imgaug_cifar100:
 
     def rotate(self, batch_idx):
         seq = iaa.Sequential([
-            iaa.Affine(rotate=(-30, 30))
+            iaa.Affine(rotate=(-10, 10))
         ])
         images = self.x_train[batch_idx * self.batch_size:(batch_idx + 1) * self.batch_size]
         images_aug = seq.augment_images(images)
@@ -132,7 +132,7 @@ class imgaug_cifar100:
 
     def additive_Gaussian_noise(self, batch_idx):
         seq = iaa.Sequential([
-            iaa.AdditiveGaussianNoise(scale=(0.0, 0.2 * 255))
+            iaa.AdditiveGaussianNoise(scale=(0.0, 0.1 * 255))
         ])
         images = self.x_train[batch_idx * self.batch_size:(batch_idx + 1) * self.batch_size]
         images_aug = seq.augment_images(images)

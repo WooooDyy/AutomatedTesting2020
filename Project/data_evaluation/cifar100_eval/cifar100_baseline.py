@@ -18,10 +18,10 @@ CNN_with_dropout
 model_name_list = [
     # "CNN_with_dropout.h5",
     # "CNN_without_dropout.h5",
-    "ResNet_v1.h5",
-    "ResNet_v2.h5",
-    "lenet5_with_dropout.h5",
-    "lenet5_without_dropout.h5",
+    # "ResNet_v1.h5",
+    # "ResNet_v2.h5",
+    # "lenet5_with_dropout.h5",
+    # "lenet5_without_dropout.h5",
     "random1_cifar100.h5",
     "random2_cifar100.h5"
 ]
@@ -52,35 +52,3 @@ for model_name_tmp in model_name_list:
 
     accuracy1 = eval_class_CNN_with_dropout.predicting(0)
     print(model_name+"  "+augmentation_policy+"  "+str(accuracy1))
-
-
-"""
-CNN_without_dropout
-"""
-
-
-"""
-ResNet_v1
-"""
-
-
-
-"""
-ResNet_v2
-"""
-
-
-
-"""
-lenet5_with_dropout
-"""
-
-
-"""
-lenet5_without_dropout
-"""
-
-
-"""
-random1
-"""

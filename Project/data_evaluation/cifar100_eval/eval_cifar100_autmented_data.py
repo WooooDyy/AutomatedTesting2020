@@ -44,15 +44,15 @@ base = {
     "ResNet_v1.h5":0.63,
     "ResNet_v2.h5":0.74,
     "lenet5_with_dropout.h5":0.55,
-    "lenet5_without_dropout.h5":0.9,
-    "random1_cifar100.h5":0.5,
-    "random2_cifar100.h5":0.35
+    "lenet5_without_dropout.h5":0.90,
+    "random1_cifar100.h5":0.50,
+    "random2_cifar100.h5":0.34
 }
 
 import csv
-with open("../../../Data/cifar100_tables/cifar100_accuracy.csv", "w") as csvfile1,\
-     open("../../../Data/cifar100_tables/cifar100_accuracy_minus.csv", "w") as csvfile2,\
-        open("../../../Data/cifar100_tables/cifar100_accuracy_loss_rate.csv", "w") as csvfile3:
+with open("../../../Data/cifar100_tables/cifar100_accuracy.csv", "w",newline="") as csvfile1,\
+     open("../../../Data/cifar100_tables/cifar100_accuracy_minus.csv", "w",newline="") as csvfile2,\
+        open("../../../Data/cifar100_tables/cifar100_accuracy_loss_rate.csv", "w",newline="") as csvfile3:
     writer1 = csv.writer(csvfile1)
     writer2 = csv.writer(csvfile2)
     writer3 = csv.writer(csvfile3)
@@ -117,11 +117,12 @@ with open("../../../Data/cifar100_tables/cifar100_accuracy.csv", "w") as csvfile
             )
 
             accuracy1 = eval_class_CNN_with_dropout.predicting(0)
+            accuracy1 = round(accuracy1,2)
             acc_list = acc_list+[accuracy1]
-            acc_minus_list = acc_minus_list+[accuracy1-base[model_name]]
-            acc_loss_rate_list = acc_loss_rate_list+[(accuracy1-base[model_name])/base[model_name]]
+            acc_minus_list = acc_minus_list+[round(accuracy1-base[model_name],2)]
+            acc_loss_rate_list = acc_loss_rate_list+[round((accuracy1-base[model_name])/base[model_name],2)]
             print("cifar-100"+"     "+model_name+"       "+augmentation_policy+"       "+str(accuracy1))
         writer1.writerow(acc_list)
         writer2.writerow(acc_minus_list)
         writer3.writerow(acc_loss_rate_list)
-#todo 跑完eval cifar10的，填进去，在搞cifar100的
+#todo 跑完eval cifar100的，填进去，在搞cifar100的

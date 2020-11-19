@@ -54,33 +54,3 @@ for model_name_tmp in model_name_list:
 
 
 
-"""
-CNN_without_dropout
-"""
-
-
-"""
-ResNet_v1
-"""
-
-
-
-"""
-ResNet_v2
-"""
-
-
-
-"""
-lenet5_with_dropout
-"""
-
-
-"""
-lenet5_without_dropout
-"""
-
-
-"""
-random1
-"""
