@@ -6,7 +6,10 @@
 
 选题方向：AI测试大作业
 
-demo视频：在项目Demo文件夹下
+demo视频：由于有点大，所以放在NJUBOX链接里面，下面两个都可以
+- https://box.nju.edu.cn/f/040984c056d54692aa05/
+- https://box.nju.edu.cn/f/040984c056d54692aa05/?dl=1
+                                            
 
 ***
 
@@ -34,7 +37,7 @@ demo视频：在项目Demo文件夹下
   - <img src="https://spring-security.oss-cn-beijing.aliyuncs.com/img/image-20201119152347563.png" alt="image-20201119152347563" style="zoom:50%;" />
 - 代码中imgaug_cifar100类图如下
   - <img src="https://spring-security.oss-cn-beijing.aliyuncs.com/img/image-20201119152542664.png" alt="image-20201119152542664" style="zoom:60%;" />
-- 本次作业中，对于每个数据集的每种方法，不会提交所有数据的增广结果，只会生成大小为10000的数据集。
+- 本次作业中，对于每个数据集的每种方法，不会提交所有数据的增广结果，只会生成大小为10000的数据集。但是在上传时文件过大，不方便上传，所以我们实验时数据集为10000，上传时数据集为100。
 
 ### 单独使用一种增广策略
 
